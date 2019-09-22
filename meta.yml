@@ -1,0 +1,29 @@
+---
+name: Clases e Instancias
+locale: es
+type: learning
+beta: false
+teacher_info: |-
+  Esta guía fue hecha en base al **release 1.8 de Wollok**, se para sobre features como:
+
+  - Properties (tanto para atributos constantes como variables)
+  - Se usa inicialización directa en vez de constructores
+  - Se usan constantes globales
+
+  Eventualmente si se incorpora un método de inicialización para cosas más avanzadas (como ser validaciones en la construcción), tal vez se podría agregar algún ejercicio extra.
+
+  :warning: En Mumuki las constantes globales mantienen estado entre un test y otro, a diferencia de los WKO que sí se inicializan nuevamente antes de cada test. Se trata de mitigar ese problema aprovechando las constantes distintas que hay para algunos ejercicios o con una secuencia específica de tests de modo que los resultados no metan ruido.
+language: wollok
+id_format: "%05d"
+order:
+- 1
+- 2
+- 3
+- 4
+- 5
+- 6
+- 7
+- 8
+- 9
+- 10
+private: false

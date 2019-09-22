@@ -1,0 +1,21 @@
+
+	test "Inicialmente la invasion tiene tamaño 1" {
+		assert.equals(1, invasion.tamanio())
+	}
+	
+	test "Luego de incrementar dos veces la invasión tiene tamaño 4" {
+		invasion.incrementar()
+		invasion.incrementar()
+		assert.equals(4, invasion.tamanio())
+	}
+
+	test "Luego de crecer, todos los zombis tienen 100 de salud" {
+		invasion.incrementar()
+		assert.that(invasion.zombis().all({ zombi => zombi.salud() == 100}))
+	}
+
+	test "Si la invasión tiene zombis sin vida, estos no se consideran para incrementar" {
+		invasion.zombis().add(new Zombi(salud = 0))
+		invasion.incrementar()
+		assert.equals(2, invasion.tamanio())
+	}
